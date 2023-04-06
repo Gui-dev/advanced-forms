@@ -5,6 +5,7 @@
   },
   "extends": [
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "standard-with-typescript"
   ],
   "overrides": [],
@@ -22,33 +23,44 @@
   "plugins": [
     "react",
     "@typescript-eslint",
-    "react-hooks"
+    "react-hooks",
+    "jsx-a11y"
+  ],
+  "ignorePatterns": [
+    "./postcss.config.js",
+    "./tailwind.config.js"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": "warn",
-    "no-useless-return": "off",
-    "no-case-declarations": "off",
-    "no-use-before-define": "off",
-    "camelcase": "off",
     "react/prop-types": "off",
-    "indent": [
-      "error",
-      2,
+    "jsx-a11y/alt-text": [
+      "warn",
       {
-        "SwitchCase": 1,
-        "ignoredNodes": [
-          "ConditionalExpression"
+        "elements": [
+          "img"
+        ],
+        "img": [
+          "Image"
         ]
       }
     ],
-    "space-before-function-paren": [
-      "error",
-      "always"
-    ],
-    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "jsx-a11y/aria-props": "warn",
+    "jsx-a11y/aria-proptypes": "warn",
+    "jsx-a11y/aria-unsupported-elements": "warn",
+    "jsx-a11y/role-has-required-aria-props": "warn",
+    "jsx-a11y/role-supports-aria-props": "warn",
     "@typescript-eslint/explicit-function-return-type": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "[require.resolve('@typescript-eslint/parser')]": [
+        ".ts",
+        ".tsx",
+        ".d.ts"
+      ]
+    }
   }
 }
