@@ -11,9 +11,15 @@ Forma avançada de usar formulários no ReactJS
   <img alt="Advanced Forms" src="./.screens/2.png" width="45%">
 </p>
 
-[✔] Validação / Transformção
-[✔] Field arrays
-[✔] Upload de arquivos
+<p>
+  [✔] Validação / Transformção
+</p>
+<p>
+  [✔] Field arrays
+</p>
+<p>
+  [✔] Upload de arquivos
+</p>
 
 ## Technologies used
 
